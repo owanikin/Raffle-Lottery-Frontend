@@ -2,12 +2,15 @@ import { useMoralis } from "react-moralis"
 import { useEffect } from "react"
 
 export default function ManualHeader() {
-    const { enableWeb3, account, isWeb3Enabled, Moralis, deactivateWeb3, isWeb3EnableLoading } = useMoralis()
+    const { enableWeb3, account, isWeb3Enabled, Moralis, deactivateWeb3, isWeb3EnableLoading } =
+        useMoralis()
 
     useEffect(() => {
         if (isWeb3Enabled) return
         if (typeof window !== "undefined") {
-            enableWeb3()
+            if (window.localStorage.getItem("connected")) {
+                enableWeb3()
+            }
         }
     }, [isWeb3Enabled])
 
