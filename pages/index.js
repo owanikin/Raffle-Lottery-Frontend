@@ -17,7 +17,7 @@ export default function Home() {
       <Header/>
       <LotteryEntrance/>
       {/* Header / Connect button / nav bar */}
-      Hello!
+      
     </div>
   )
 }
