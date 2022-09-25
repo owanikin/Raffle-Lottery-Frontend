@@ -104,9 +104,13 @@ export default function LotteryEntrance() {
                     <div>Entrance Fee: {ethers.utils.formatUnits(entranceFee, "ether")}</div>
                     <div>Number Of Players: {numPlayers} </div>
                     <div>Recent Winner: {recentWinner}</div>
+                    <div><b>NB:</b> You can only enter the Raffle with the <b>Goerli Test Network</b></div>
                 </div>
             ) : (
-                <div>No Raffle Address detected</div>
+                <div>No Raffle Address detected
+                    <div><b>NB:</b> You can only enter the Raffle with the <b>Goerli Test Network</b></div>
+                </div>
+                
             )}
         </div>
     )
